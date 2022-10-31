@@ -11,7 +11,7 @@ var nav = null
 var speed = 150
 
 func _ready():
-	position = start_position[Global.level - 1]
+	position = start_position[Global.save_data["level"] - 1]
 
 func _physics_process(_delta):
 	nav = get_node_or_null("/root/Game/Navigation2D")

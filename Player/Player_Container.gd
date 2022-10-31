@@ -10,6 +10,6 @@ var initial_position = [
 func _process(_delta):
 	if not has_node("Player"):
 		var player = Player.instance()
-		player.position = initial_position[Global.level - 1]
+		player.position = initial_position[Global.save_data["level"] - 1]
 		player.name = "Player"
 		add_child(player)
