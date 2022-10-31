@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Enemies/Enemy2.gd" type="Script" id=1]
+[ext_resource path="res://Assets/enemy2.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 23, 32 )
+
+[node name="Enemy2" type="KinematicBody2D"]
+position = Vector2( 2510, 870 )
+collision_layer = 0
+collision_mask = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 21, -15, 22, 18, 21, 18, 21, 31, -21, 31, -21, -32, 21, -32 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 0, -1 )
+shape = SubResource( 11 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
