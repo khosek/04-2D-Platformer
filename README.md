@@ -1,15 +1,18 @@
-# Project Name
+# 04-2D Platformer
 
-Context and date
+Submitted November 2nd, 2022
 
-Description
+A 2D platformer in which the player goes through two levels
 
 ## Implementation
-Which features you included
+Has a second level
+Incorporates save and load
 
 ## References
+Art assets from https://kenney.nl/
 
 ## Future Development
+None
 
 ## Created by
-Jason Francis
+Kevin Hosek
