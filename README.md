@@ -13,6 +13,7 @@ Has a quarterstaff throw attack - activated with left mouse button
 
 ## References
 Art assets from https://kenney.nl/
+
 Quarterstaff asset made with https://www.piskelapp.com/
 
 ## Future Development
