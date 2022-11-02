@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 onready var SM = $StateMachine
+var quarterstaff_container
 
 var velocity = Vector2.ZERO
 var jump_power = Vector2.ZERO
@@ -21,15 +22,6 @@ var moving = false
 var is_jumping = false
 var double_jumped = false
 var should_direction_flip = true # whether or not player controls (left/right) can flip the player sprite
-#
-#var has_staff = true
-#
-#func _input(event):
-#	if event is InputEventMouseButton:
-#		print("Mouse Click/Unclick at: ", event.position)
-#		if has_staff:
-#			has_staff = false
-#			$Quarterstaff_Container.throw_staff(self.get_angle_to(event.position))
 
 func _physics_process(_delta):
 	velocity.x = clamp(velocity.x,-max_move,max_move)

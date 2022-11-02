@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Assets/player.png" type="Texture" id=1]
 [ext_resource path="res://StateMachine/Jumping.gd" type="Script" id=2]
@@ -9,7 +9,6 @@
 [ext_resource path="res://StateMachine/Falling.gd" type="Script" id=7]
 [ext_resource path="res://StateMachine/Moving_and_Jumping.gd" type="Script" id=8]
 [ext_resource path="res://Player/Player.gd" type="Script" id=9]
-[ext_resource path="res://Player/Quarterstaff_Container.gd" type="Script" id=10]
 
 [sub_resource type="AtlasTexture" id=11]
 flags = 4
@@ -108,8 +107,10 @@ animations = [ {
 extents = Vector2( 8, 23 )
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( 200, 200 )
 script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 15 )
@@ -180,8 +181,5 @@ script = ExtResource( 5 )
 [node name="Timer" type="Timer" parent="StateMachine/Coyote"]
 wait_time = 0.2
 one_shot = true
-
-[node name="Quarterstaff_Container" type="Node2D" parent="."]
-script = ExtResource( 10 )
 
 [connection signal="timeout" from="StateMachine/Coyote/Timer" to="StateMachine/Coyote" method="_on_Timer_timeout"]
